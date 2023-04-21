@@ -3,13 +3,10 @@ extends layouts/frontend
 block content
     .ui.middle.aligned.center.aligned.grid
         .six.wide.column
-            form.ui.large.form(method="post", action="/register")
+            form.ui.large.form(method="post", action="/connexionForm")
                 .ui.stacked.segment
-                    +field('text', 'firstName', 'First name')
-                    +field('text', 'lastName', 'Last name')
                     +field('email', 'email', 'your.email@address.tld')
                     +field('password', 'password', 'Password')
-                    +field('password', 'password_confirm', 'Confirm password')
                     button(type="submit").ui.fluid.large.teal.submit.button Login
 
                 .ui.error.message
